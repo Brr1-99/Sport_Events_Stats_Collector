@@ -1,0 +1,62 @@
+{
+    "get": "odds",
+    "parameters": {
+      "league": "140",
+      "fixture": "877992",
+      "bet": "1",
+      "bookmaker": "8",
+      "timezone": "Europe/Madrid",
+      "season": "2022"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+      "current": 1,
+      "total": 1
+    },
+    "response": [
+      {
+        "league": {
+          "id": 140,
+          "name": "La Liga",
+          "country": "Spain",
+          "logo": "https://media.api-sports.io/football/leagues/140.png",
+          "flag": "https://media.api-sports.io/flags/es.svg",
+          "season": 2022
+        },
+        "fixture": {
+          "id": 877992,
+          "timezone": "Europe/Madrid",
+          "date": "2022-09-17T21:00:00+02:00",
+          "timestamp": 1663441200
+        },
+        "update": "2022-09-16T10:02:51+02:00",
+        "bookmakers": [
+          {
+            "id": 8,
+            "name": "Bet365",
+            "bets": [
+              {
+                "id": 1,
+                "name": "Match Winner",
+                "values": [
+                  {
+                    "value": "Home",
+                    "odd": "1.53"
+                  },
+                  {
+                    "value": "Draw",
+                    "odd": "4.00"
+                  },
+                  {
+                    "value": "Away",
+                    "odd": "6.50"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
