@@ -1,4 +1,5 @@
 import requests, os
+import pandas as pd
 from datetime import date, timedelta
 from dotenv import load_dotenv
 from interfaces import buildMatch
@@ -9,8 +10,9 @@ today = date.today()
 
 season = today.year
 
-tuesday = today - timedelta(days=today.weekday()-1)
-monday = tuesday + timedelta(days=6)
+endRound = today - timedelta(1)
+
+startRound = today - timedelta(4)
 
 leagues_id = {
     "Premier_League": 39,
@@ -22,7 +24,7 @@ leagues_id = {
 
 base_url = "https://api-football-v1.p.rapidapi.com/v3/"
 
-querystring = {"league":"140","season":f"{season}","from":"2022-09-16","to":"2022-09-18","timezone":"Europe/Madrid", "status":"FT"}
+querystring = {"league":"140","season":f"{season}","from":f"{startRound}","to":f"{endRound}","timezone":"Europe/Madrid", "status":"NS-FT"}
 
 headers = {
 	"X-RapidAPI-Key": os.getenv("API_KEY"),
@@ -30,6 +32,10 @@ headers = {
 }
 
 response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
+
+
+round = response['response'][0]['league']['round']
+leagueName = response['response'][0]['league']['name']
 
 matchs = []
 
@@ -39,7 +45,7 @@ for item in response['response']:
 
 	homeTeam = item['teams']['home']['name']
 	awayTeam = item['teams']['away']['name']
-	league = item['league']['name']
+
 	homeGoals = item['goals']['home']
 	awayGoals = item['goals']['away']
 
@@ -56,9 +62,11 @@ for item in response['response']:
 	expected = min(homeTeamOdds, drawOdds, awayTeamOdds)
 
 	matchs.append(buildMatch(
-		home=homeTeam, away=awayTeam, league=league, 
+		home=homeTeam, away=awayTeam, 
 		homeOdds=homeTeamOdds, drawOdds=drawOdds, awayOdds=awayTeamOdds, 
 		homeGoals=homeGoals, awayGoals=awayGoals
 		))
 
-print(matchs)
+df = pd.DataFrame.from_records(matchs)
+
+print(df)

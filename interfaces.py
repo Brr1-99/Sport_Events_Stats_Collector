@@ -7,7 +7,6 @@
 def buildMatch(
     home: str,
     away: str,
-    league: str,
     homeOdds: int,
     drawOdds: int,
     awayOdds: int,
@@ -15,12 +14,11 @@ def buildMatch(
     awayGoals: int,
     ) -> dict:
     return {
-        'home': home,
-        'away': away,
-        'league': league,
+        'Home': home,
+        'Away': away,
         '1': homeOdds,
         'x': drawOdds,
         '2': awayOdds,
-        'homeGoals': homeGoals,
-        'awayGoals': awayGoals,
+        'HomeGoals': homeGoals,
+        'AwayGoals': awayGoals,
     }
