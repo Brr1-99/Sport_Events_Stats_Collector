@@ -27,7 +27,7 @@ def buildMatch(
         '2': awayOdds,
         'HomeGoals': homeGoals,
         'AwayGoals': awayGoals,
-        'Expected Wining Odd ': min(homeOdds, drawOdds, awayOdds),
+        'Expected': min(homeOdds, drawOdds, awayOdds),
         'Result': getResult(homeGoals, awayGoals)
     }
 

@@ -1,11 +1,11 @@
-,Home,Away,Round,Date,1,X,2,HomeGoals,AwayGoals,Expected Wining Odd ,Result
-0,Athletic Club,Rayo Vallecano,Regular Season - 6,2022-09-17,1.60,3.80,5.75,3,2,1.60,1
-1,Atletico Madrid,Real Madrid,Regular Season - 6,2022-09-18,3.00,3.40,2.30,1,2,2.30,2
-2,Barcelona,Elche,Regular Season - 6,2022-09-17,1.08,11.00,26.00,3,0,1.08,1
-3,Real Betis,Girona,Regular Season - 6,2022-09-18,1.66,3.75,5.25,2,1,1.66,1
-4,Valencia,Celta Vigo,Regular Season - 6,2022-09-17,2.30,3.10,3.30,3,0,2.30,1
-5,Osasuna,Getafe,Regular Season - 6,2022-09-18,1.72,3.30,6.00,0,2,1.72,2
-6,Valladolid,Cadiz,Regular Season - 6,2022-09-16,2.00,3.25,4.00,0,1,2.00,2
-7,Real Sociedad,Espanyol,Regular Season - 6,2022-09-18,1.65,3.75,5.50,2,1,1.65,1
-8,Villarreal,Sevilla,Regular Season - 6,2022-09-18,1.72,3.80,5.00,1,1,1.72,X
-9,Mallorca,Almeria,Regular Season - 6,2022-09-17,1.90,3.25,4.50,1,0,1.90,1
+Home,Away,Round,Date,1,X,2,HomeGoals,AwayGoals,Expected,Result
+Athletic Club,Rayo Vallecano,6,2022-09-17,1.60,3.80,5.75,3,2,1.60,1
+Atletico Madrid,Real Madrid,6,2022-09-18,3.00,3.40,2.30,1,2,2.30,2
+Barcelona,Elche,6,2022-09-17,1.08,11.00,26.00,3,0,1.08,1
+Real Betis,Girona,6,2022-09-18,1.66,3.75,5.25,2,1,1.66,1
+Valencia,Celta Vigo,6,2022-09-17,2.30,3.10,3.30,3,0,2.30,1
+Osasuna,Getafe,6,2022-09-18,1.72,3.30,6.00,0,2,1.72,2
+Valladolid,Cadiz,6,2022-09-16,2.00,3.25,4.00,0,1,2.00,2
+Real Sociedad,Espanyol,6,2022-09-18,1.65,3.75,5.50,2,1,1.65,1
+Villarreal,Sevilla,6,2022-09-18,1.72,3.80,5.00,1,1,1.72,X
+Mallorca,Almeria,6,2022-09-17,1.90,3.25,4.50,1,0,1.90,1

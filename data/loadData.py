@@ -2,7 +2,7 @@ from datetime import datetime
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
-from interfaces import buildMatch
+from data.interfaces import buildMatch
 
 load_dotenv()
 
@@ -19,14 +19,16 @@ def getValues(value: int, season: int, startRound: datetime, endRound: datetime)
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
 
-    round = response['response'][0]['league']['round']
+    round = response['response'][0]['league']['round'].split(' ')[-1]
 
     matchs = []
 
     for item in response['response']:
 
         id = item['fixture']['id']
-        date = item['fixture']['date'].split('T')[0]
+        datetime = item['fixture']['date'].split('T')[0]
+
+        date = datetime.split('-')[-1] + datetime.split('-')[-2]
 
         homeTeam = item['teams']['home']['name']
         awayTeam = item['teams']['away']['name']
