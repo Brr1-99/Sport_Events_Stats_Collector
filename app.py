@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from datetime import date
+from data.ids import leagues_id
 
 today = date.today()
 
@@ -14,7 +15,7 @@ This app performs simple request to the API-FOOTBALL Api, provided by RapidAPI. 
 * **Data source:** [RapidAPI](https://rapidapi.com/api-sports/api/api-football/)
 """)
 
-leagues = ["La_Liga", "Premier_League", "Ligue_1", "Bundesliga", "Serie_A" ]
+leagues = [league for league in leagues_id.keys()]
 
 st.sidebar.header('Leagues available')
 competition = st.sidebar.selectbox('Leagues : ', leagues)
@@ -23,7 +24,7 @@ highlight = st.sidebar.selectbox('Highlighted values : ', ['None', 'Max', 'Min']
 
 @st.cache
 def load_data(option: str, competition: str) -> tuple[pd.DataFrame, int]:
-    df = pd.read_csv(f'./src/{season}_{competition}.csv', index_col=False)
+    df = pd.read_csv(f'./src/rounds/{season}_{competition}.csv', index_col=False)
     df['1'] = df['1'].apply('{:0>3}'.format)
     df['X'] = df['X'].apply('{:0>3}'.format)
     df['2'] = df['2'].apply('{:0>3}'.format)

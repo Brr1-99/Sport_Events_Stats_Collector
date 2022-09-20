@@ -2,7 +2,7 @@ from datetime import datetime
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
-from data.interfaces import buildMatch
+from data.interfaces import buildMatch, buildTeam
 
 load_dotenv()
 
@@ -66,6 +66,8 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
     standings = league_info['standings'][0]
 
+    teams = []
+
     for stand in standings:
 
         rank = stand['rank']
@@ -80,3 +82,11 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
         wins = stand['all']['win']
         draws = stand['all']['draw']
         loses = stand['all']['lose']
+
+        teams.append(buildTeam(
+            name=name, rank=rank, points=points,
+            forGoals=forGoals, againstGoals=againstGoals, goalDiff=goalDiff,
+            games=games, wins=wins, draws=draws, loses=loses
+        ))
+    
+    return pd.DataFrame.from_records(teams)
