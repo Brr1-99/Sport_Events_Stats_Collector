@@ -8,17 +8,16 @@ load_dotenv()
 
 base_url = "https://api-football-v1.p.rapidapi.com/v3/"
 
-def getValues(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
-
-    querystring = {"league":f"{value}","season":f"{season}","from":f"{startRound}","to":f"{endRound}","timezone":"Europe/Madrid", "status":"NS-FT"}
-
-    headers = {
+headers = {
         "X-RapidAPI-Key": os.getenv("API_KEY"),
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
-    response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
+def getRoundStats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
 
+    querystring = {"league":f"{value}","season":f"{season}","from":f"{startRound}","to":f"{endRound}","timezone":"Europe/Madrid", "status":"NS-FT"}
+
+    response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
     round = response['response'][0]['league']['round'].split(' ')[-1]
 
     matchs = []
@@ -39,7 +38,6 @@ def getValues(value: int, season: int, startRound: datetime, endRound: datetime)
         oddsquerystring = {"fixture":f"{id}","league":f"{value}","season":f"{season}","timezone":"Europe/Madrid","bookmaker":"8","bet":"1"}
 
         oddsresponse = requests.request("GET", base_url + 'odds', headers=headers, params=oddsquerystring).json()
-
         values = oddsresponse['response'][0]['bookmakers'][0]['bets'][0]['values']
 
         homeTeamOdds = values[0]['odd']
@@ -53,3 +51,32 @@ def getValues(value: int, season: int, startRound: datetime, endRound: datetime)
             ))
 
     return pd.DataFrame.from_records(matchs)
+
+
+def getStandings(leagueId: int, season: int) -> pd.DataFrame:
+
+    querystring = {"season":f"{season}","league": f"{leagueId}"} 
+
+    response = requests.request("GET", base_url + 'standings', headers=headers, params=querystring).json()
+
+    league_info = response['response'][0]['league']
+
+    name = league_info['name']
+    year = league_info['season'] 
+
+    standings = league_info['standings'][0]
+
+    for stand in standings:
+
+        rank = stand['rank']
+        name = stand['team']['name']
+        points = stand['points']
+
+        forGoals = stand['all']['goals']['for']
+        againstGoals = stand['all']['goals']['against']
+        goalDiff = stand['goalDiff']
+
+        games = stand['all']['played']
+        wins = stand['all']['win']
+        draws = stand['all']['draw']
+        loses = stand['all']['lose']

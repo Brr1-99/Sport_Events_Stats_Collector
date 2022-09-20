@@ -1,6 +1,6 @@
 import os
 from datetime import date, timedelta
-from data.loadData import getValues
+from data.loadData import getRoundStats
 
 today = date.today()
 
@@ -19,7 +19,7 @@ leagues_id = {
 }
 
 for key, value in leagues_id.items():
-    df = getValues(value, season, startRound, endRound)
+    df = getRoundStats(value, season, startRound, endRound)
     if not os.path.exists(f'../src/{season}_{key}.csv'):
         df.to_csv(f'../src/{season}_{key}.csv', mode='w', index=True, header=True)
     else:

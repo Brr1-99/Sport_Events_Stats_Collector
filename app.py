@@ -19,6 +19,7 @@ leagues = ["La_Liga", "Premier_League", "Ligue_1", "Bundesliga", "Serie_A" ]
 st.sidebar.header('Leagues available')
 competition = st.sidebar.selectbox('Leagues : ', leagues)
 option = st.sidebar.selectbox('Stats from : ', ['Winrate', 'Goals'])
+highlight = st.sidebar.selectbox('Highlighted values : ', ['None', 'Max', 'Min'])
 
 @st.cache
 def load_data(option: str, competition: str) -> tuple[pd.DataFrame, int]:
@@ -32,7 +33,9 @@ def load_data(option: str, competition: str) -> tuple[pd.DataFrame, int]:
 
 data, max = load_data(option, competition)
 
-limit = st.slider(label= 'Number of data to show', max_value=max, min_value=1, value=int(max/2) )
+limit = st.slider(label= 'Number of data to show', max_value=max, min_value=1, value=int(max/2))
+
+data = data[:limit].style.highlight_max(axis=0, color="green")
 
 st.header(f"""Displaying *{option}* Stats of *{competition}* """)
-st.write(data[:limit], unsafe_allow_html=True)
+st.dataframe(data)
