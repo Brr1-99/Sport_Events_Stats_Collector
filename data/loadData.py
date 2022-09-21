@@ -53,18 +53,21 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
     return pd.DataFrame.from_records(matchs)
 
 
+def obtainYield(stand: dict, param: str) -> int:
+
+    games = stand[f'{param}']['played']
+    wins = stand[f'{param}']['win']
+    draws = stand[f'{param}']['draw']
+
+    return (100 * (wins + draws/3) / games)
+
 def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
     querystring = {"season":f"{season}","league": f"{leagueId}"} 
 
     response = requests.request("GET", base_url + 'standings', headers=headers, params=querystring).json()
 
-    league_info = response['response'][0]['league']
-
-    name = league_info['name']
-    year = league_info['season'] 
-
-    standings = league_info['standings'][0]
+    standings = response['response'][0]['league']['standings'][0]
 
     teams = []
 
@@ -73,20 +76,26 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
         rank = stand['rank']
         name = stand['team']['name']
         points = stand['points']
+        form = stand['form']
 
         forGoals = stand['all']['goals']['for']
         againstGoals = stand['all']['goals']['against']
-        goalDiff = stand['goalDiff']
+        goalDiff = stand['goalsDiff']
 
-        games = stand['all']['played']
-        wins = stand['all']['win']
-        draws = stand['all']['draw']
-        loses = stand['all']['lose']
+        totalGames = stand['all']['played']
+        totalWins = stand['all']['win']
+        totalDraws = stand['all']['draw']
+        totalLoses = stand['all']['lose']
+
+        allPoints = obtainYield(stand, 'all')
+        homePoints = obtainYield(stand, 'home')
+        awayPoints = obtainYield(stand, 'away')
 
         teams.append(buildTeam(
-            name=name, rank=rank, points=points,
+            name=name, rank=rank, points=points, form=form,
             forGoals=forGoals, againstGoals=againstGoals, goalDiff=goalDiff,
-            games=games, wins=wins, draws=draws, loses=loses
+            games=totalGames, wins=totalWins, draws=totalDraws, loses=totalLoses,
+            allPoints=allPoints, homePoints=homePoints, awayPoints=awayPoints,
         ))
     
     return pd.DataFrame.from_records(teams)
