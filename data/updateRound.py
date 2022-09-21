@@ -1,7 +1,7 @@
 import os
 from datetime import date, timedelta
 from data.loadData import getRoundStats
-from ids import leagues_id
+from .ids import leagues_id
 
 today = date.today()
 
