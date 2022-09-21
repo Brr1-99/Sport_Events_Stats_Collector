@@ -16,6 +16,6 @@ ids = leagues_id
 for key, value in ids.items():
     df = getRoundStats(value, season, startRound, endRound)
     if not os.path.exists(f'src/rounds/{season}_{key}.csv'):
-        df.to_csv(f'src/rounds/{season}_{key}.csv', mode='w', index=True, header=True)
+        df.to_csv(f'src/rounds/{season}_{key}.csv', mode='w', index=False, header=True)
     else:
-        df.to_csv(f'src/rounds/{season}_{key}.csv', mode='a', index=True, header=False)
+        df.to_csv(f'src/rounds/{season}_{key}.csv', mode='a', index=False, header=False)

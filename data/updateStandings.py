@@ -16,4 +16,4 @@ ids = leagues_id
 def updateStandings() -> None:
     for key, value in ids.items():
         df = getStandings(value, season)
-        df.to_csv(f'src/standings/{season}_{key}_standings.csv', mode='w', index=True, header=True)
+        df.to_csv(f'src/standings/{season}_{key}_standings.csv', mode='w', index=False, header=True)

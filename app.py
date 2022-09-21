@@ -19,24 +19,31 @@ leagues = [league for league in leagues_id.keys()]
 
 st.sidebar.header('Leagues available')
 competition = st.sidebar.selectbox('Leagues : ', leagues)
-option = st.sidebar.selectbox('Stats from : ', ['Winrate', 'Goals'])
-highlight = st.sidebar.selectbox('Highlighted values : ', ['None', 'Max', 'Min'])
+
+# @st.cache
+# def load_data(option: str, competition: str) -> tuple[pd.DataFrame, int]:
+#     df = pd.read_csv(f'./src/rounds/{season}_{competition}.csv', index_col=False)
+#     df['1'] = df['1'].apply('{:0>3}'.format)
+#     df['X'] = df['X'].apply('{:0>3}'.format)
+#     df['2'] = df['2'].apply('{:0>3}'.format)
+#     df['Expected'] = df['Expected'].apply('{:0>3}'.format)
+
+#     return df, len(df)
 
 @st.cache
-def load_data(option: str, competition: str) -> tuple[pd.DataFrame, int]:
-    df = pd.read_csv(f'./src/rounds/{season}_{competition}.csv', index_col=False)
-    df['1'] = df['1'].apply('{:0>3}'.format)
-    df['X'] = df['X'].apply('{:0>3}'.format)
-    df['2'] = df['2'].apply('{:0>3}'.format)
-    df['Expected'] = df['Expected'].apply('{:0>3}'.format)
-
+def load_data(competition: str) -> tuple[pd.DataFrame, int]:
+    df = pd.read_csv(f'./src/standings/{season}_{competition}_standings.csv', index_col=False)
+    df['All points %'] = df['All points %'].apply('{:0>3}'.format)
+    df['Home points %'] = df['Home points %'].apply('{:0>3}'.format)
+    df['Away points %'] = df['Away points %'].apply('{:0>3}'.format)
+    df['W %'] = df['W %'].apply('{:0>3}'.format)
+    df['D %'] = df['D %'].apply('{:0>3}'.format)
+    df['L %'] = df['L %'].apply('{:0>3}'.format)
     return df, len(df)
 
-data, max = load_data(option, competition)
+data, max = load_data(competition)
 
-limit = st.slider(label= 'Number of data to show', max_value=max, min_value=1, value=int(max/2))
+data = data.style.highlight_max(subset=data.columns[4:], color='green', axis=0)
 
-data = data[:limit].style.highlight_max(axis=0, color="green")
-
-st.header(f"""Displaying *{option}* Stats of *{competition}* """)
+st.header(f"""Displaying Standings of *{competition}* """)
 st.dataframe(data)
