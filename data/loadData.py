@@ -27,7 +27,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         id = item['fixture']['id']
         datetime = item['fixture']['date'].split('T')[0]
 
-        date = datetime.split('-')[-1] + datetime.split('-')[-2]
+        date = datetime.split('-')[-1] + '-' + datetime.split('-')[-2]
 
         homeTeam = item['teams']['home']['name']
         awayTeam = item['teams']['away']['name']
