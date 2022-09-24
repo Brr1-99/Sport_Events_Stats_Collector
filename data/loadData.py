@@ -18,7 +18,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
     querystring = {"league":f"{value}","season":f"{season}","from":f"{startRound}","to":f"{endRound}","timezone":"Europe/Madrid", "status":"NS-FT"}
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
-    round = response['response'][0]['league']['round'].split(' ')[-1]
+    num_round = response['response'][0]['league']['round'].split(' ')[-1]
 
     matchs = []
 
@@ -45,7 +45,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         awayTeamOdds = values[2]['odd']
 
         matchs.append(buildMatch(
-            home=homeTeam, away=awayTeam, round=round, date=date,
+            home=homeTeam, away=awayTeam, round=num_round, date=date,
             homeOdds=homeTeamOdds, drawOdds=drawOdds, awayOdds=awayTeamOdds, 
             homeGoals=homeGoals, awayGoals=awayGoals
             ))
