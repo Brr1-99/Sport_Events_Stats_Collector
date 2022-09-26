@@ -37,6 +37,8 @@ standings_data = standings_data.style.highlight_max(subset=standings_data.column
 st.header(f"""Displaying Standings of *{competition}* """)
 st.dataframe(standings_data)
 
+st.markdown("""---""")
+
 st.sidebar.header('Round Standing Selector')
 comp = st.sidebar.selectbox('Leagues : ', leagues, index=4, key='rounds')
 
@@ -52,14 +54,18 @@ def load_round_odds(comp: str) -> tuple[pd.DataFrame, int]:
 
 odds_data, max_round = load_round_odds(comp)
 
-st.header(f"""Displaying Standings of *{comp}* """)
-round = st.selectbox('Round Number:', list(range(1,max_round+1))+['All'])
+st.header(f"""Displaying Round Odds of *{comp}* """)
 
+round = st.selectbox('Round Number:', list(range(1,max_round+1))+['All'], index=int(max_round))
 if round != 'All':
-    selected_round = odds_data[odds_data['Round']== round]
-else:
-    selected_round = odds_data
+    odds_data = odds_data[odds_data['Round']== round]
 
-selected_round = selected_round.style.highlight_max(subset=selected_round.columns[4:], color='green', axis=0)
+teams = pd.read_csv(f'./src/standings/{season}_{comp}_standings.csv', index_col=False)['Name']
+team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
+if team != 'All':
+    odds_data = odds_data.loc[(odds_data['Home']== team) | (odds_data['Away'] == team)]
 
-st.dataframe(selected_round)
+
+odds_data = odds_data.style.highlight_max(subset=odds_data.columns[4:], color='green', axis=0)
+
+st.dataframe(odds_data)
