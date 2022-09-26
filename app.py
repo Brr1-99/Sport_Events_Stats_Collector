@@ -1,3 +1,4 @@
+from operator import index
 import pandas as pd
 import streamlit as st
 from datetime import date
@@ -28,10 +29,12 @@ def load_data(competition: str) -> pd.DataFrame:
     return df
 
 standings_data = load_data(competition)
-standings_data = standings_data.style.format(precision= 2).highlight_max(subset=standings_data.columns[4:], color='green', axis=0)
+standings_data_styled = standings_data.style\
+    .format(precision= 2)\
+    .highlight_max(subset=standings_data.columns[4:], color='green', axis=0)
 
 st.header(f"""Displaying Standings of *{competition}* """)
-st.dataframe(standings_data)
+st.dataframe(standings_data_styled)
 
 st.markdown("""---""")
 
@@ -58,6 +61,8 @@ team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
 if team != 'All':
     odds_data = odds_data.loc[(odds_data['Home']== team) | (odds_data['Away'] == team)]
 
-odds_data = odds_data.style.format(precision= 2).highlight_max(subset=odds_data.columns[4:-1], color="green")
+odds_data_styled = odds_data.style\
+    .format(precision= 2)\
+    .highlight_max(subset=odds_data.columns[4:-1], color="cyan")\
 
-st.dataframe(odds_data)
+st.dataframe(odds_data_styled)
