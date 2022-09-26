@@ -12,7 +12,7 @@ All tables are interactive and dynamic. You can use the selectors on the left si
 
 ## Standings Table
 
-![showcase](src.showcase.standings.PNG)
+![showcase](src/showcase/standings.PNG)
 
 ## Round odds Table
 
