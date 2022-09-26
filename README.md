@@ -16,4 +16,4 @@ All tables are interactive and dynamic. You can use the selectors on the left si
 
 ## Round odds Table
 
-![showcase](rounds.PNG)
+![showcase](src/showcase/rounds.PNG)
