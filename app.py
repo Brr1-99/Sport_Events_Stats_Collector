@@ -65,7 +65,6 @@ team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
 if team != 'All':
     odds_data = odds_data.loc[(odds_data['Home']== team) | (odds_data['Away'] == team)]
 
-
 odds_data = odds_data.style.highlight_max(subset=odds_data.columns[4:], color='green', axis=0)
 
 st.dataframe(odds_data)
