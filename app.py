@@ -1,4 +1,3 @@
-from operator import index
 import pandas as pd
 import streamlit as st
 from datetime import date
@@ -59,10 +58,23 @@ if round != 'All':
 teams = pd.read_csv(f'./src/standings/{season}_{comp}_standings.csv', index_col=False)['Name']
 team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
 if team != 'All':
-    odds_data = odds_data.loc[(odds_data['Home']== team) | (odds_data['Away'] == team)]
+    odds_data = odds_data.loc[(odds_data['Home'] == team) | (odds_data['Away'] == team)]
+
+def show_results(row: object) -> list :
+    text = []
+    idx = {'1': 0, 'X': 1, '2': 2}
+    for item in row:
+        if isinstance(item,float):
+            text.append('color: red')
+        else:
+            text.append('')
+    text[idx[row['Final']]] = 'color: green'
+    text[-2] = 'color: green' if row['Awaited'] == row[row['Final']] else 'color: red'
+    return text
 
 odds_data_styled = odds_data.style\
     .format(precision= 2)\
-    .highlight_max(subset=odds_data.columns[4:-1], color="cyan")\
+    .apply(show_results, subset=odds_data.columns[4:], axis=1)\
+    .highlight_max(subset=odds_data.columns[4:-1], color='blue')
 
 st.dataframe(odds_data_styled)
