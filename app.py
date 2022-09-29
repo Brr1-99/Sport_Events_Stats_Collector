@@ -35,6 +35,26 @@ standings_data_styled = standings_data.style\
 st.header(f"""Displaying Standings of *{competition}* """)
 st.dataframe(standings_data_styled)
 
+translate_options = {
+    'For Goals': 'FG',
+    'Against Goals': 'AG',
+    'Goal Diff': 'GD',
+    'Wins': 'W',
+    'Draws': 'D',
+    'Loses': 'L',
+}
+
+teams = [team for team in standings_data['Name']]
+teams_compare = st.multiselect(
+    'Do you want to compare any teams?',
+    teams)
+
+data_teams = standings_data.loc[standings_data['Name'].isin(teams_compare)]
+
+if len(teams_compare) > 1:
+    option = st.selectbox('Compare value:', ['For Goals', 'Against Goals', 'Goal Diff', 'Wins', 'Draws', 'Loses', 'All points %','Home points %','Away points %'], index=2)
+    st.bar_chart(data_teams, x='Name', y=f'{translate_options[option] if option in translate_options.keys() else option}')
+
 st.markdown("""---""")
 
 # Part responsible for the rounds odds visualizer
@@ -53,7 +73,7 @@ st.header(f"""Displaying Round Odds of *{comp}* """)
 
 round = st.selectbox('Round Number:', list(range(1, max_round + 1)) + ['All'], index=int(max_round))
 if round != 'All':
-    odds_data = odds_data[odds_data['Round']== round]
+    odds_data = odds_data[odds_data['Round'] == round]
 
 teams = pd.read_csv(f'./src/standings/{season}_{comp}_standings.csv', index_col=False)['Name']
 team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
