@@ -60,11 +60,11 @@ st.markdown("""---""")
 # Part responsible for the rounds odds visualizer
 
 st.sidebar.header('Round Standing Selector')
-comp = st.sidebar.selectbox('Leagues : ', leagues[4] + 'Rest of the leagues available soon', index=4, key='rounds')
+comp = st.sidebar.selectbox('Leagues : ', leagues, index=0, key='rounds')
 
 @st.cache
 def load_round_odds(comp: str) -> tuple[pd.DataFrame, int]:
-    dataf = pd.read_csv(f'./src/rounds/{season}_La_Liga.csv', index_col=False)
+    dataf = pd.read_csv(f'./src/rounds/{season}_{comp}.csv', index_col=False)
     return dataf, dataf['Round'].iat[-1]
 
 odds_data, max_round = load_round_odds(comp)
