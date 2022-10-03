@@ -1,6 +1,6 @@
 from data.updateStandings import updateStandings
 from data.updateRound import updateRound
 
-updateStandings()
+# updateStandings()
 
-# updateRound()
+updateRound()

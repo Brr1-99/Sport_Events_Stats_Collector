@@ -38,11 +38,16 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         oddsquerystring = {"fixture":f"{id}","league":f"{value}","season":f"{season}","timezone":"Europe/Madrid","bookmaker":"8","bet":"1"}
 
         oddsresponse = requests.request("GET", base_url + 'odds', headers=headers, params=oddsquerystring).json()
-        values = oddsresponse['response'][0]['bookmakers'][0]['bets'][0]['values']
-
-        homeTeamOdds = values[0]['odd']
-        drawOdds = values[1]['odd']
-        awayTeamOdds = values[2]['odd']
+        try:
+            values = oddsresponse['response'][0]['bookmakers'][0]['bets'][0]['values']
+            homeTeamOdds = values[0]['odd']
+            drawOdds = values[1]['odd']
+            awayTeamOdds = values[2]['odd']
+            
+        except Exception:
+            homeTeamOdds = 1.00
+            drawOdds = 1.00
+            awayTeamOdds = 1.00
 
         matchs.append(buildMatch(
             home=homeTeam, away=awayTeam, round=num_round, date=date,
