@@ -46,7 +46,7 @@ translate_options = {
 
 teams = [team for team in standings_data['Name']]
 teams_compare = st.multiselect(
-    'Do you want to compare any teams?',
+    'Do you want to compare any teams? 🆚',
     teams)
 
 data_teams = standings_data.loc[standings_data['Name'].isin(teams_compare)]
@@ -71,14 +71,31 @@ odds_data, max_round = load_round_odds(comp)
 
 st.header(f"""Displaying Round Odds of *{comp}* """)
 
-round = st.selectbox('Round Number:', list(range(1, max_round + 1)) + ['All'], index=int(max_round))
-if round != 'All':
-    odds_data = odds_data[odds_data['Round'] == round]
+round_option, team_option = st.columns(2)
 
-teams = pd.read_csv(f'./src/standings/{season}_{comp}_standings.csv', index_col=False)['Name']
-team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
-if team != 'All':
-    odds_data = odds_data.loc[(odds_data['Home'] == team) | (odds_data['Away'] == team)]
+with round_option:
+    round = st.selectbox('Round Number:', list(range(1, max_round + 1)) + ['All'], index=int(max_round))
+    if round != 'All':
+        odds_data = odds_data[odds_data['Round'] == round]
+with team_option:
+    teams = pd.read_csv(f'./src/standings/{season}_{comp}_standings.csv', index_col=False)['Name']
+    team = st.selectbox('Team search:', list(teams) + ['All'], index=len(teams))
+    if team != 'All':
+        odds_data = odds_data.loc[(odds_data['Home'] == team) | (odds_data['Away'] == team)]
+
+goals_option, number_goals = st.columns(2)
+
+with goals_option:
+    goals = st.radio(
+    "Over/Under Selection:",
+    ('+=', '-='))
+
+with number_goals:
+    number = st.selectbox(label='Number of goals ⚽:',options=range(10))
+    if goals == '+=':
+        odds_data = odds_data.loc[(odds_data['HG'] + odds_data['AG'] >= number)]
+    else:
+        odds_data = odds_data.loc[(odds_data['HG'] + odds_data['AG'] <= number)]
 
 def show_results(row: object) -> list :
     text = []
@@ -97,4 +114,7 @@ odds_data_styled = odds_data.style\
     .apply(show_results, subset=odds_data.columns[4:], axis=1)\
     .highlight_max(subset=odds_data.columns[4:-1], color='blue')
 
-st.dataframe(odds_data_styled)
+try:
+    st.dataframe(odds_data_styled)
+except ValueError:
+    st.write('No coincidences found ❌. Try with a different value 🤔',)
