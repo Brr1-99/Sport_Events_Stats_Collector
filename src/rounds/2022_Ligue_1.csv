@@ -1,1 +1,81 @@
 Home,Away,Round,Date,1,X,2,HG,AG,Awaited,Final
+Marseille,Reims,1,07-08,1.61,3.80,5.25,4,1,1.61,1
+Rennes,Lorient,1,07-08,1.50,4.75,6.00,0,1,1.50,2
+Angers,Nantes,1,07-08,3.00,3.25,2.37,0,0,2.37,X
+Lens,Stade Brestois,1,07-08,1.60,4.20,5.25,3,2,1.60,1
+Lille,Auxerre,1,07-08,1.60,4.20,5.25,4,1,1.60,1
+Montpellier,Estac Troyes,1,07-08,2.15,3.20,3.60,3,2,2.15,1
+Toulouse,Nice,1,07-08,2.50,3.25,2.87,1,1,2.50,X
+Clermont Foot,Paris Saint Germain,1,06-08,13.00,7.00,1.20,0,5,1.20,2
+Strasbourg,Monaco,1,06-08,2.30,3.20,3.20,1,2,2.30,2
+Lyon,Ajaccio,1,05-08,1.33,5.00,8.50,2,1,1.33,1
+Stade Brestois,Marseille,2,14-08,3.80,3.75,1.95,1,1,1.95,X
+Nice,Strasbourg,2,14-08,2.10,3.40,3.50,1,1,2.10,X
+Ajaccio,Lens,2,14-08,3.25,3.10,2.30,0,0,2.30,X
+Auxerre,Angers,2,14-08,2.37,3.30,3.10,2,2,2.37,X
+Reims,Clermont,2,14-08,2.00,3.20,4.00,2,4,2.00,2
+Estac Troyes,Toulouse,2,14-08,2.90,3.25,2.50,0,3,2.50,2
+Lorient,Lyon,2,07-09,4.20,4.00,1.80,3,1,1.80,1
+Paris Saint Germain,Montpellier,2,13-08,1.05,17.00,23.00,5,2,1.05,1
+Monaco,Rennes,2,13-08,2.05,3.60,3.50,1,1,2.05,X
+Nantes,Lille,2,12-08,3.10,3.30,2.30,1,1,2.30,X
+Lille,Paris Saint Germain,3,21-08,7.00,5.50,1.36,1,7,1.36,2
+Rennes,Ajaccio,3,21-08,1.50,4.33,6.50,2,1,1.50,1
+Angers,Stade Brestois,3,21-08,2.37,3.25,3.10,1,3,2.37,2
+Clermont Foot,Nice,3,21-08,3.60,3.30,2.10,1,0,2.10,1
+Montpellier,Auxerre,3,21-08,1.90,3.50,4.00,1,2,1.90,2
+Toulouse,Lorient,3,21-08,1.80,3.75,4.33,2,2,1.80,X
+Strasbourg,Reims,3,21-08,1.75,3.60,4.75,1,1,1.75,X
+Marseille,Nantes,3,20-08,1.66,4.00,4.75,2,1,1.66,1
+Monaco,Lens,3,20-08,1.83,4.00,4.20,1,4,1.83,2
+Lyon,Estac Troyes,3,19-08,1.28,6.50,8.50,4,1,1.28,1
+Paris Saint Germain,Monaco,4,28-08,1.25,6.50,10.00,1,1,1.25,X
+Reims,Lyon,4,28-08,4.00,4.00,1.80,1,1,1.80,X
+Stade Brestois,Montpellier,4,28-08,1.90,3.50,4.00,0,7,1.90,2
+Lorient,Clermont Foot,4,28-08,1.95,3.40,4.20,2,1,1.95,1
+Nice,Marseille,4,28-08,2.75,3.60,2.50,0,3,2.50,2
+Estac Troyes,Angers,4,28-08,2.25,3.30,3.25,3,1,2.25,1
+Nantes,Toulouse,4,28-08,2.37,3.40,3.00,3,1,2.37,1
+Lens,Rennes,4,27-08,2.20,3.50,3.20,2,1,2.20,1
+Auxerre,Strasbourg,4,27-08,3.50,3.40,2.10,1,0,2.10,1
+Ajaccio,Lille,4,26-08,3.00,3.20,2.45,1,3,2.45,2
+Lens,Lorient,5,31-08,1.72,3.60,5.00,5,2,1.72,1
+Lille,Nice,5,31-08,2.05,3.40,3.60,1,2,2.05,2
+Marseille,Clermont Foot,5,31-08,1.36,5.00,8.00,1,0,1.36,1
+Rennes,Stade Brestois,5,31-08,1.55,4.33,5.50,3,1,1.55,1
+Toulouse,Paris Saint Germain,5,31-08,10.00,6.50,1.25,0,3,1.25,2
+Angers,Reims,5,31-08,3.00,3.30,2.30,2,4,2.30,2
+Strasbourg,Nantes,5,31-08,2.05,3.50,3.50,1,1,2.05,X
+Lyon,Auxerre,5,31-08,1.28,5.75,8.00,2,1,1.28,1
+Monaco,Estac Troyes,5,31-08,1.28,5.75,9.00,2,4,1.28,2
+Montpellier,Ajaccio,5,31-08,2.20,3.10,3.50,2,0,2.20,1
+Nice,Monaco,6,04-09,2.90,3.40,2.37,0,1,2.37,2
+Estac Troyes,Rennes,6,04-09,3.75,4.00,1.85,1,1,1.85,X
+Ajaccio,Lorient,6,04-09,2.40,3.00,3.10,0,1,2.40,2
+Stade Brestois,Strasbourg,6,04-09,2.45,3.40,2.87,1,1,2.45,X
+Clermont Foot,Toulouse,6,04-09,3.30,3.40,2.20,2,0,2.20,1
+Reims,Lens,6,04-09,3.20,3.50,2.25,1,1,2.25,X
+Montpellier,Lille,6,04-09,3.60,3.75,1.95,1,3,1.95,2
+Nantes,Paris Saint Germain,6,03-09,11.00,7.00,1.22,0,3,1.22,2
+Lyon,Angers,6,03-09,1.30,5.50,10.00,5,0,1.30,1
+Auxerre,Marseille,6,03-09,4.20,3.75,1.83,0,2,1.83,2
+Monaco,Lyon,7,11-09,2.60,3.50,2.70,2,1,2.60,1
+Rennes,Auxerre,7,11-09,1.40,4.50,8.00,5,0,1.40,1
+Ajaccio,Nice,7,11-09,3.40,2.90,2.37,0,1,2.37,2
+Angers,Montpellier,7,11-09,2.40,3.50,2.80,2,1,2.40,1
+Lorient,Nantes,7,11-09,2.45,3.20,3.10,3,2,2.45,1
+Toulouse,Reims,7,11-09,2.40,3.50,2.87,1,0,2.40,1
+Strasbourg,Clermont Foot,7,11-09,1.66,3.80,5.25,0,0,1.66,X
+Marseille,Lille,7,11-09,2.10,3.60,3.40,2,1,2.10,1
+Paris Saint Germain,Stade Brestois,7,11-09,1.08,12.00,21.00,1,0,1.08,1
+Lens,Estac Troyes,7,11-09,1.50,4.33,6.00,1,0,1.50,1
+Lyon,Paris Saint Germain,8,18-09,5.00,5.00,1.53,0,1,1.53,1
+Nantes,Lens,8,18-09,3.60,3.75,1.95,0,0,1.95,X
+Stade Brestois,Ajaccio,8,18-09,2.05,3.30,4.00,0,1,2.05,2
+Clermont Foot,Estac Troyes,8,18-09,2.25,3.40,3.20,1,3,2.25,2
+Marseille,Rennes,8,18-09,2.05,3.60,3.60,1,1,2.05,X
+Nice,Angers,8,18-09,1.61,4.00,5.50,0,1,1.61,2
+Reims,Monaco,8,18-09,3.10,3.60,2.20,0,3,2.20,2
+Lille,Toulouse,8,17-09,1.70,4.00,4.75,2,1,1.70,1
+Montpellier,Strasbourg,8,17-09,2.37,3.50,2.87,2,1,2.37,1
+Auxerre,Lorient,8,16-09,2.62,3.30,2.62,1,3,2.62,2

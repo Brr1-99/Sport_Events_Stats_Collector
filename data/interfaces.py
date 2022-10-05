@@ -24,10 +24,10 @@ def buildMatch(
         '1': homeOdds,
         'X': drawOdds,
         '2': awayOdds,
-        'HomeGoals': homeGoals,
-        'AwayGoals': awayGoals,
-        'Expected': min(homeOdds, drawOdds, awayOdds),
-        'Result': getResult(homeGoals, awayGoals)
+        'HG': homeGoals,
+        'AG': awayGoals,
+        'Awaited': min(homeOdds, drawOdds, awayOdds),
+        'Final': getResult(homeGoals, awayGoals)
     }
 
 # Function to compute the match result 

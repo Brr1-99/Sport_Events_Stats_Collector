@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 from datetime import date, timedelta
 from data.loadData import getRoundStats
 from .ids import leagues_id
@@ -9,7 +10,7 @@ season = today.year
 
 endRound = today - timedelta(1)
 
-startRound = today - timedelta(7)
+startRound = today - timedelta(6)
 
 ids = leagues_id
 
@@ -19,4 +20,6 @@ def updateRound() -> None:
         if not os.path.exists(f'src/rounds/{season}_{key}.csv'):
             df.to_csv(f'src/rounds/{season}_{key}.csv', mode='w', index=False, header=True)
         else:
-            df.to_csv(f'src/rounds/{season}_{key}.csv', mode='a', index=False, header=False)
+            data = pd.read_csv(f'src/rounds/{season}_{key}.csv', index_col=False)
+            new_data = pd.concat([data,df])
+            new_data.to_csv(f'src/rounds/{season}_{key}.csv', mode='w', index=False, header=True)

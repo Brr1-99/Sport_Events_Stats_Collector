@@ -1,7 +1,7 @@
 leagues_id = {
+    "Premier_League": 39,
+    "Ligue_1": 61, # Pending update
     "Bundesliga": 78,
-    "Ligue_1": 61,
     "Serie_A": 135,
     "La_Liga" : 140,
-    "Premier_League": 39,
 }
