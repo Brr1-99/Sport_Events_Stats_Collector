@@ -10,7 +10,7 @@ season = today.year
 
 endRound = today - timedelta(1)
 
-startRound = today - timedelta(6)
+startRound = today - timedelta(7)
 
 ids = leagues_id
 

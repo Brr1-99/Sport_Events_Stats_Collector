@@ -1,15 +1,10 @@
-import os
-from datetime import date, timedelta
+from datetime import date
 from data.loadData import getStandings
 from .ids import leagues_id
 
 today = date.today()
 
 season = today.year
-
-endRound = today - timedelta(1)
-
-startRound = today - timedelta(4)
 
 ids = leagues_id
 
