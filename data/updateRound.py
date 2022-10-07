@@ -5,13 +5,9 @@ from data.loadData import getRoundStats
 from .ids import leagues_id
 
 today = date.today()
-
 season = today.year
-
 endRound = today - timedelta(1)
-
 startRound = today - timedelta(7)
-
 ids = leagues_id
 
 def updateRound() -> None:

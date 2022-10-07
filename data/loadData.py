@@ -15,7 +15,10 @@ headers = {
 
 def getRoundStats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
 
-    querystring = {"league":f"{value}","season":f"{season}","from":f"{startRound}","to":f"{endRound}","timezone":"Europe/Madrid", "status":"NS-FT"}
+    querystring = {
+        "league":f"{value}","season":f"{season}",
+        "from":f"{startRound}","to":f"{endRound}",
+        "timezone":"Europe/Madrid", "status":"NS-FT"}
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
     num_round = response['response'][0]['league']['round'].split(' ')[-1]
@@ -35,7 +38,10 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         homeGoals = item['goals']['home']
         awayGoals = item['goals']['away']
 
-        oddsquerystring = {"fixture":f"{id}","league":f"{value}","season":f"{season}","timezone":"Europe/Madrid","bookmaker":"8","bet":"1"}
+        oddsquerystring = {
+            "fixture":f"{id}","league":f"{value}",
+            "season":f"{season}","timezone":"Europe/Madrid",
+            "bookmaker":"8","bet":"1"}
 
         oddsresponse = requests.request("GET", base_url + 'odds', headers=headers, params=oddsquerystring).json()
         try:
@@ -52,8 +58,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         matchs.append(buildMatch(
             home=homeTeam, away=awayTeam, round=num_round, date=date,
             homeOdds=homeTeamOdds, drawOdds=drawOdds, awayOdds=awayTeamOdds, 
-            homeGoals=homeGoals, awayGoals=awayGoals
-            ))
+            homeGoals=homeGoals, awayGoals=awayGoals))
 
     return pd.DataFrame.from_records(matchs)
 
@@ -64,7 +69,7 @@ def obtainYield(stand: dict, param: str) -> int:
     wins = stand[f'{param}']['win']
     draws = stand[f'{param}']['draw']
 
-    return (100 * (wins + draws/3) / games)
+    return (100*(wins + draws/3)/games)
 
 def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
