@@ -1,78 +1,88 @@
 Home,Away,Round,Date,1,X,2,HG,AG,Awaited,Final
-West Ham,Manchester City,1,07-08,7.50,5.25,1.36,0,2,1.36,2
-Leicester,Brentford,1,07-08,1.85,3.80,4.00,2,2,1.85,X
-Manchester United,Brighton,1,07-08,1.80,3.75,4.33,1,2,1.80,1
-Everton,Chelsea,1,06-08,6.50,4.20,1.55,0,1,1.55,2
-Bournemouth,Aston Villa,1,06-08,4.00,3.50,1.95,2,0,1.95,1
-Leeds,Wolves,1,06-08,2.37,3.30,3.00,2,1,1.37,1
-Newcastle,Nottingham Forest,1,06-08,1.53,4.00,6.00,2,0,1.53,1
-Tottenham,Southampton,1,06-08,1.36,5.00,8.50,4,1,1.36,1
-Fulham,Liverpool,1,06-08,11.00,5.75,1.28,2,2,1.28,X
-Crystal Palace,Arsenal,1,05-08,4.50,3.60,1.80,0,2,1.80,2
-Liverpool,Crystal Palace,2,15-08,1.28,5.75,11.00,1,1,1.28,1
-Chelsea,Tottenham,2,14-08,2.10,3.50,3.50,2,2,3.50,X
-Nottingham Forest,West Ham,2,14-08,3.80,3.50,1.95,1,0,1.95,1
-Brentford,Manchester United,2,13-08,4.50,3.75,1.75,4,0,1.75,1
-Arsenal,Leicester,2,13-08,1.55,4.33,5.50,4,2,1.55,1
-Brighton,Newcastle,2,13-08,2.37,3.30,3.00,0,0,1.37,X
-Manchester City,Bournemouth,2,13-08,1.08,12.00,21.00,4,0,1.08,1
-Southampton,Leeds,2,13-08,2.40,3.50,2.80,2,2,2.40,X
-Wolves,Fulham,2,13-08,2.20,3.40,3.30,0,0,2.20,X
-Aston Villa,Everton,2,13-08,1.75,3.50,5.00,2,1,1.75,1
-Manchester United,Liverpool,3,22-08,4.75,4.20,1.66,2,1,1.66,1
-Newcastle,Manchester City,3,21-08,6.50,4.75,1.44,3,3,1.44,X
-Leeds,Chelsea,3,21-08,5.75,4.75,1.50,3,0,1.50,1
-West Ham,Brighton,3,21-08,2.50,3.40,2.80,0,2,2.50,2
-Bournemouth,Arsenal,3,20-08,7.50,4.75,1.40,0,3,1.40,2
-Crystal Palace,Aston Villa,3,20-08,2.45,3.20,3.00,3,1,2.45,1
-Everton,Nottingham Forest,3,20-08,1.85,3.60,4.20,1,1,1.85,X
-Fulham,Brentford,3,20-08,2.62,3.40,2.70,3,2,2.62,1
-Leicester,Southampton,3,20-08,1.72,4.00,4.33,1,2,1.72,2
-Tottenham,Wolves,3,20-08,1.40,4.75,7.50,1,0,1.40,1
-Nottingham Forest,Tottenham,4,28-08,7.00,4.75,1.45,0,2,1.45,2
-Aston Villa,West Ham,4,28-08,2.10,3.50,3.75,0,1,2.10,2
-Wolves,Newcastle,4,28-08,2.45,3.25,2.90,1,1,2.45,X
-Arsenal,Fulham,4,27-08,1.40,5.50,6.50,2,1,1.40,1
-Brentford,Everton,4,27-08,2.05,3.30,3.80,1,1,2.05,X
-Brighton,Leeds,4,27-08,1.66,4.00,5.25,1,0,1.66,1
-Chelsea,Leicester,4,27-08,1.40,5.00,7.50,2,1,1.40,1
-Liverpool,Bournemouth,4,27-08,1.14,8.00,17.00,9,0,1.14,1
-Manchester City,Crystal Palace,4,27-08,1.20,7.00,15.00,4,2,1.20,1
-Southampton,Manchester United,4,27-08,3.40,3.80,1.95,0,1,1.95,2
-Leicester,Manchester United,5,01-09,3.10,3.75,2.15,0,1,2.15,2
-Liverpool,Newcastle,5,31-08,1.28,6.00,10.00,2,1,1.28,1
-West Ham,Tottenham,5,31-08,3.20,3.60,2.20,1,1,2.20,X
-Arsenal,West Ham,5,31-08,1.50,4.50,6.00,2,1,1.50,1
-Bournemouth,Wolves,5,31-08,3.20,3.25,2.30,0,0,2.30,X
-Manchester City,Nottingham Forest,5,31-08,1.08,11.00,23.00,6,0,1.08,1
-Leeds,Everton,5,30-08,2.05,3.60,3.40,1,1,2.05,X
-Southampton,Chelsea,5,30-08,5.00,4.00,1.65,2,1,1.65,1
-Crystal Palace,Brentford,5,30-08,2.05,3.40,3.60,1,1,2.05,X
-Fulham,Brighton,5,30-08,3.30,3.20,2.30,2,1,2.30,1
-Manchester United,Arsenal,6,04-09,2.60,3.50,2.60,3,1,2.60,1
-Brighton,Leicester,6,04-09,1.90,3.50,4.20,5,2,1.90,1
-Aston Villa,Manchester City,6,03-09,8.00,5.75,1.33,1,1,1.33,X
-Brentford,Leeds,6,03-09,2.10,3.60,3.30,5,2,2.10,1
-Chelsea,West Ham,6,03-09,1.65,4.00,5.00,2,1,1.65,1
-Newcastle,Crystal Palace,6,03-09,2.10,3.50,3.60,0,0,2.10,X
-Nottingham,Bournemouth,6,03-09,2.15,3.30,3.50,2,3,2.15,2
-Tottenham,Fulham,6,03-09,1.50,4.33,6.50,2,1,1.50,1
-Wolves,Southampton,6,03-09,2.20,3.40,3.25,1,0,2.20,1
-Everton,Liverpool,6,03-09,7.50,4.75,1.36,0,0,1.36,X
-Everton,West Ham,8,18-09,2.90,3.25,2.50,1,0,2.50,1
-Brentford,Arsenal,8,18-09,4.50,3.00,1.75,0,3,1.75,2
-Tottenham,Leicester,8,17-09,1.55,4.50,6.00,6,2,1.55,1
-Newcastle,Bournemouth,8,17-09,1.40,4.50,7.50,1,1,1.40,X
-Wolves,Manchester City,8,17-09,8.00,5.75,1.33,0,3,1.33,2
-Aston Villa,Southampton,8,16-09,2.10,3.50,3.50,1,0,2.10,1
-Nottingham Forest,Fulham,8,16-09,2.75,3.30,2.60,2,3,2.60,2
-Bournemouth,Brentford,9,01-10,3.30,3.40,2.20,0,0,2.20,X
-Arsenal,Tottenham,9,01-10,2.00,3.75,3.50,3,1,2.00,1
-Crystal Palace,Chelsea,9,01-10,4.50,3.60,1.80,1,2,1.80,2
-Fulham,Newcastle,9,01-10,3.00,3.40,2.37,1,4,2.37,2
-Leeds,Aston Villa,9,02-10,2.30,3.40,3.10,0,0,2.30,X
-Leicester,Nottingham Forest,9,03-10,1.70,4.00,4.50,4,0,1.70,1
-Liverpool,Brighton,9,01-10,1.44,4.75,6.50,3,3,1.44,X
-Manchester City,Manchester United,9,02-10,1.44,5.25,6.50,6,3,1.44,1
-Southampton,Everton,9,01-10,2.25,3.30,3.25,1,2,2.25,2
-West Ham,Wolves,9,01-10,2.00,3.40,4.00,2,0,2.00,1
+West Ham,Manchester City,1,07-08,7.5,5.25,1.36,0,2,1.36,2
+Leicester,Brentford,1,07-08,1.85,3.8,4.0,2,2,1.85,X
+Manchester United,Brighton,1,07-08,1.8,3.75,4.33,1,2,1.8,1
+Everton,Chelsea,1,06-08,6.5,4.2,1.55,0,1,1.55,2
+Bournemouth,Aston Villa,1,06-08,4.0,3.5,1.95,2,0,1.95,1
+Leeds,Wolves,1,06-08,2.37,3.3,3.0,2,1,1.37,1
+Newcastle,Nottingham Forest,1,06-08,1.53,4.0,6.0,2,0,1.53,1
+Tottenham,Southampton,1,06-08,1.36,5.0,8.5,4,1,1.36,1
+Fulham,Liverpool,1,06-08,11.0,5.75,1.28,2,2,1.28,X
+Crystal Palace,Arsenal,1,05-08,4.5,3.6,1.8,0,2,1.8,2
+Liverpool,Crystal Palace,2,15-08,1.28,5.75,11.0,1,1,1.28,1
+Chelsea,Tottenham,2,14-08,2.1,3.5,3.5,2,2,3.5,X
+Nottingham Forest,West Ham,2,14-08,3.8,3.5,1.95,1,0,1.95,1
+Brentford,Manchester United,2,13-08,4.5,3.75,1.75,4,0,1.75,1
+Arsenal,Leicester,2,13-08,1.55,4.33,5.5,4,2,1.55,1
+Brighton,Newcastle,2,13-08,2.37,3.3,3.0,0,0,1.37,X
+Manchester City,Bournemouth,2,13-08,1.08,12.0,21.0,4,0,1.08,1
+Southampton,Leeds,2,13-08,2.4,3.5,2.8,2,2,2.4,X
+Wolves,Fulham,2,13-08,2.2,3.4,3.3,0,0,2.2,X
+Aston Villa,Everton,2,13-08,1.75,3.5,5.0,2,1,1.75,1
+Manchester United,Liverpool,3,22-08,4.75,4.2,1.66,2,1,1.66,1
+Newcastle,Manchester City,3,21-08,6.5,4.75,1.44,3,3,1.44,X
+Leeds,Chelsea,3,21-08,5.75,4.75,1.5,3,0,1.5,1
+West Ham,Brighton,3,21-08,2.5,3.4,2.8,0,2,2.5,2
+Bournemouth,Arsenal,3,20-08,7.5,4.75,1.4,0,3,1.4,2
+Crystal Palace,Aston Villa,3,20-08,2.45,3.2,3.0,3,1,2.45,1
+Everton,Nottingham Forest,3,20-08,1.85,3.6,4.2,1,1,1.85,X
+Fulham,Brentford,3,20-08,2.62,3.4,2.7,3,2,2.62,1
+Leicester,Southampton,3,20-08,1.72,4.0,4.33,1,2,1.72,2
+Tottenham,Wolves,3,20-08,1.4,4.75,7.5,1,0,1.4,1
+Nottingham Forest,Tottenham,4,28-08,7.0,4.75,1.45,0,2,1.45,2
+Aston Villa,West Ham,4,28-08,2.1,3.5,3.75,0,1,2.1,2
+Wolves,Newcastle,4,28-08,2.45,3.25,2.9,1,1,2.45,X
+Arsenal,Fulham,4,27-08,1.4,5.5,6.5,2,1,1.4,1
+Brentford,Everton,4,27-08,2.05,3.3,3.8,1,1,2.05,X
+Brighton,Leeds,4,27-08,1.66,4.0,5.25,1,0,1.66,1
+Chelsea,Leicester,4,27-08,1.4,5.0,7.5,2,1,1.4,1
+Liverpool,Bournemouth,4,27-08,1.14,8.0,17.0,9,0,1.14,1
+Manchester City,Crystal Palace,4,27-08,1.2,7.0,15.0,4,2,1.2,1
+Southampton,Manchester United,4,27-08,3.4,3.8,1.95,0,1,1.95,2
+Leicester,Manchester United,5,01-09,3.1,3.75,2.15,0,1,2.15,2
+Liverpool,Newcastle,5,31-08,1.28,6.0,10.0,2,1,1.28,1
+West Ham,Tottenham,5,31-08,3.2,3.6,2.2,1,1,2.2,X
+Arsenal,West Ham,5,31-08,1.5,4.5,6.0,2,1,1.5,1
+Bournemouth,Wolves,5,31-08,3.2,3.25,2.3,0,0,2.3,X
+Manchester City,Nottingham Forest,5,31-08,1.08,11.0,23.0,6,0,1.08,1
+Leeds,Everton,5,30-08,2.05,3.6,3.4,1,1,2.05,X
+Southampton,Chelsea,5,30-08,5.0,4.0,1.65,2,1,1.65,1
+Crystal Palace,Brentford,5,30-08,2.05,3.4,3.6,1,1,2.05,X
+Fulham,Brighton,5,30-08,3.3,3.2,2.3,2,1,2.3,1
+Manchester United,Arsenal,6,04-09,2.6,3.5,2.6,3,1,2.6,1
+Brighton,Leicester,6,04-09,1.9,3.5,4.2,5,2,1.9,1
+Aston Villa,Manchester City,6,03-09,8.0,5.75,1.33,1,1,1.33,X
+Brentford,Leeds,6,03-09,2.1,3.6,3.3,5,2,2.1,1
+Chelsea,West Ham,6,03-09,1.65,4.0,5.0,2,1,1.65,1
+Newcastle,Crystal Palace,6,03-09,2.1,3.5,3.6,0,0,2.1,X
+Nottingham,Bournemouth,6,03-09,2.15,3.3,3.5,2,3,2.15,2
+Tottenham,Fulham,6,03-09,1.5,4.33,6.5,2,1,1.5,1
+Wolves,Southampton,6,03-09,2.2,3.4,3.25,1,0,2.2,1
+Everton,Liverpool,6,03-09,7.5,4.75,1.36,0,0,1.36,X
+Everton,West Ham,8,18-09,2.9,3.25,2.5,1,0,2.5,1
+Brentford,Arsenal,8,18-09,4.5,3.0,1.75,0,3,1.75,2
+Tottenham,Leicester,8,17-09,1.55,4.5,6.0,6,2,1.55,1
+Newcastle,Bournemouth,8,17-09,1.4,4.5,7.5,1,1,1.4,X
+Wolves,Manchester City,8,17-09,8.0,5.75,1.33,0,3,1.33,2
+Aston Villa,Southampton,8,16-09,2.1,3.5,3.5,1,0,2.1,1
+Nottingham Forest,Fulham,8,16-09,2.75,3.3,2.6,2,3,2.6,2
+Bournemouth,Brentford,9,01-10,3.3,3.4,2.2,0,0,2.2,X
+Arsenal,Tottenham,9,01-10,2.0,3.75,3.5,3,1,2.0,1
+Crystal Palace,Chelsea,9,01-10,4.5,3.6,1.8,1,2,1.8,2
+Fulham,Newcastle,9,01-10,3.0,3.4,2.37,1,4,2.37,2
+Leeds,Aston Villa,9,02-10,2.3,3.4,3.1,0,0,2.3,X
+Leicester,Nottingham Forest,9,03-10,1.7,4.0,4.5,4,0,1.7,1
+Liverpool,Brighton,9,01-10,1.44,4.75,6.5,3,3,1.44,X
+Manchester City,Manchester United,9,02-10,1.44,5.25,6.5,6,3,1.44,1
+Southampton,Everton,9,01-10,2.25,3.3,3.25,1,2,2.25,2
+West Ham,Wolves,9,01-10,2.0,3.4,4.0,2,0,2.0,1
+Bournemouth,Leicester,10,08-10,3.20,3.50,2.20,2,1,2.20,1
+Arsenal,Liverpool,10,09-10,2.55,3.60,2.55,3,2,2.55,1
+Brighton,Tottenham,10,08-10,2.55,3.40,2.70,0,1,2.55,2
+Chelsea,Wolves,10,08-10,1.44,4.20,7.50,3,0,1.44,1
+Crystal Palace,Leeds,10,09-10,2.10,3.50,3.50,2,1,2.10,1
+Everton,Manchester United,10,09-10,3.60,3.60,2.05,1,2,2.05,2
+Manchester City,Southampton,10,08-10,1.11,10.00,17.00,4,0,1.11,1
+Newcastle,Brentford,10,08-10,1.65,4.00,5.25,5,1,1.65,1
+Nottingham Forest,Aston Villa,10,10-10,3.80,3.60,1.95,1,1,1.95,X
+West Ham,Fulham,10,09-10,1.65,4.00,5.25,3,1,1.65,1

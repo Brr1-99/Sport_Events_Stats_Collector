@@ -21,7 +21,11 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
         "timezone":"Europe/Madrid", "status":"NS-FT"}
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
-    num_round = response['response'][0]['league']['round'].split(' ')[-1]
+    try:
+        num_round = response['response'][0]['league']['round'].split(' ')[-1]
+    except Exception:
+        print(f'La competición {value} ha fallado')
+        return None
 
     matchs = []
 
@@ -51,6 +55,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
             awayTeamOdds = values[2]['odd']
             
         except Exception:
+            print(f'El partido -> {homeTeam} vs {awayTeam} ha fallado')
             homeTeamOdds = 1.00
             drawOdds = 1.00
             awayTeamOdds = 1.00
