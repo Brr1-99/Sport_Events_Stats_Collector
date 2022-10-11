@@ -74,7 +74,7 @@ st.header(f"""Displaying Round Odds of *{comp}* """)
 round_option, team_option = st.columns(2)
 
 with round_option:
-    round = st.selectbox('Round Number:', list(range(1, max_round + 1)) + ['All'], index=int(max_round))
+    round = st.selectbox('Round Number:', list(range(1, int(max_round) + 1)) + ['All'], index=int(max_round))
     if round != 'All':
         odds_data = odds_data[odds_data['Round'] == round]
 with team_option:
@@ -91,7 +91,7 @@ with goals_option:
     ('+=', '-='))
 
 with number_goals:
-    number = st.selectbox(label='Number of goals ⚽:',options=range(10))
+    number = st.selectbox(label='Number of goals ⚽:',options=range(11))
     if goals == '+=':
         odds_data = odds_data.loc[(odds_data['HG'] + odds_data['AG'] >= number)]
     else:
