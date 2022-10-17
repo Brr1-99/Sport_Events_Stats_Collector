@@ -3,4 +3,4 @@ from data.updateRound import updateRound
 
 updateStandings()
 
-updateRound()
+#updateRound()

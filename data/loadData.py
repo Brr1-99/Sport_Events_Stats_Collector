@@ -1,5 +1,5 @@
 from datetime import datetime
-from ids import teams_id
+from .ids import teams_id
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
@@ -92,8 +92,7 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
         rank = stand['rank']
         name = stand['team']['name']
-        # Test for getting the team id
-        teams_id[name] = stand['team']['id']
+
         points = stand['points']
         form = stand['form']
 
@@ -121,6 +120,7 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
 
 def getNextGames(team: str) -> pd.DataFrame:
+    
     id = teams_id[team]
 
     querystring = {"team":f"{id}","next":"10"}
