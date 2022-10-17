@@ -1,8 +1,9 @@
 from datetime import datetime
+from ids import teams_id
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
-from data.interfaces import buildMatch, buildTeam
+from data.interfaces import buildMatch, buildTeam, buildEvent
 
 load_dotenv()
 
@@ -76,6 +77,7 @@ def obtainYield(stand: dict, param: str) -> int:
 
     return (100*(wins + draws/3)/games)
 
+
 def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
     querystring = {"season":f"{season}","league": f"{leagueId}"} 
@@ -90,6 +92,8 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
 
         rank = stand['rank']
         name = stand['team']['name']
+        # Test for getting the team id
+        teams_id[name] = stand['team']['id']
         points = stand['points']
         form = stand['form']
 
@@ -114,3 +118,32 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
         ))
     
     return pd.DataFrame.from_records(teams)
+
+
+def getNextGames(team: str) -> pd.DataFrame:
+    id = teams_id[team]
+
+    querystring = {"team":f"{id}","next":"10"}
+
+    response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
+
+    games = []
+
+    for item in response['response']:
+
+        datetime = item['fixture']['date'].split('T')[0]
+
+        date = datetime.split('-')[-1] + '-' + datetime.split('-')[-2]
+
+        homeTeam = item['teams']['home']['name']
+
+        awayTeam = item['teams']['away']['name']
+
+        competition = item['league']['name']
+
+        games.append(buildEvent(
+            homeTeam=homeTeam, awayTeam=awayTeam,
+            date=date, competition=competition
+        ))
+
+    return pd.DataFrame.from_records(games)

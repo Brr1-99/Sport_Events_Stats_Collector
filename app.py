@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from datetime import date
-from data.ids import leagues_id
+from data.ids import leagues_id, teams_id
 
 today = date.today()
 
@@ -118,3 +118,10 @@ try:
     st.dataframe(odds_data_styled)
 except ValueError:
     st.write('No coincidences found ❌. Try with a different value 🤔',)
+
+# Function to compute the logo of the team
+def logo(name: str) -> str:
+    id = teams_id[team]
+    return(f"<img src='https://media.api-sports.io/football/teams/{id}.png"
+        f"""' style='display:block;margin-left:auto;margin-right:auto;width:30px;border:0;'><div style='text-align:center'>{name}"""
+         "</div>")

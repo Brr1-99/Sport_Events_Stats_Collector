@@ -5,3 +5,7 @@ leagues_id = {
     "Serie_A": 135,
     "La_Liga" : 140,
 }
+
+teams_id = {
+    
+}

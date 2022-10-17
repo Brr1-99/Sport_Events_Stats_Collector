@@ -4,7 +4,7 @@ from datetime import datetime
 # │       INTERFACES
 # └────────────────────────
 
-# Function to create the match information 
+# Function to create the finished match information 
 def buildMatch(
     home: str,
     away: str,
@@ -27,7 +27,21 @@ def buildMatch(
         'HG': homeGoals,
         'AG': awayGoals,
         'Awaited': min(homeOdds, drawOdds, awayOdds),
-        'Final': getResult(homeGoals, awayGoals)
+        'Final': getResult(homeGoals, awayGoals),
+    }
+
+# Function to create an upcoming match
+def buildEvent(
+    homeTeam: str,
+    awayTeam: str,
+    date: datetime,
+    competition: str,
+    ) -> dict:
+    return {
+        'Home': homeTeam,
+        'Away': awayTeam,
+        'Date': date,
+        'Competition': competition,
     }
 
 # Function to compute the match result 
