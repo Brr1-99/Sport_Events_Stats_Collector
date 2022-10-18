@@ -1,4 +1,5 @@
 from datetime import datetime
+import time
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
@@ -31,6 +32,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
 
     for item in response['response']:
 
+        time.sleep(2)
         id = item['fixture']['id']
         datetime = item['fixture']['date'].split('T')[0]
 

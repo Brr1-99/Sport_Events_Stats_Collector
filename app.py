@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from datetime import date
-from data.loadData import getNextGames
+from data.updateFuture import updateFuture
 from data.ids import leagues_id, teams_id
 
 today = date.today()
@@ -65,7 +65,7 @@ if len(teams_compare) > 1:
 
 # @st.cache
 # def load_next_matches(comp: str) -> pd.DataFrame:
-#     data = getNextGames(leagues_id[comp])
+#     data = updateFuture(comp)
 #     data['Home'] = data['Home'].apply(lambda x: logo(x))
 #     data['Away'] = data['Away'].apply(lambda x: logo(x))
 #     return data

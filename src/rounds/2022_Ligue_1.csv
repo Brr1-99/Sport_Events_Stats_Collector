@@ -89,13 +89,23 @@ Lorient,Lille,9,02-10,3.0,3.5,2.3,2,1,2.3,1
 Paris Saint Germain,Nice,9,01-10,1.22,7.0,11.0,2,1,1.22,1
 Strasbourg,Rennes,9,01-10,3.2,3.6,2.15,1,3,2.15,2
 Angers,Marseille,9,30-09,4.2,3.8,1.8,0,3,1.8,2
-Angers,Strasbourg,10,09-10,2.62,3.40,2.55,2,3,2.55,2
-Clermont Foot,Auxerre,10,09-10,2.25,3.40,3.25,2,1,2.25,1
-Lille,Lens,10,09-10,2.60,3.40,2.62,1,0,2.60,1
-Montpellier,Monaco,10,09-10,3.50,4.00,1.95,0,2,1.95,2
-Nice,Estac Troyes,10,09-10,1.90,3.30,4.50,3,2,1.90,1
-Lyon,Toulouse,10,07-10,1.44,5.00,6.00,1,1,1.44,X
-Marseille,Ajaccio,10,08-10,1.45,4.33,7.00,1,2,1.45,2
-Stade Brestois 29,Lorient,10,09-10,2.25,3.50,3.20,1,2,2.25,2
-Rennes,Nantes,10,09-10,1.55,4.20,5.50,3,0,1.55,1
-Reims,Paris Saint Germain,10,08-10,8.00,6.00,1.30,0,0,1.30,X
+Angers,Strasbourg,10,09-10,2.62,3.4,2.55,2,3,2.55,2
+Clermont Foot,Auxerre,10,09-10,2.25,3.4,3.25,2,1,2.25,1
+Lille,Lens,10,09-10,2.6,3.4,2.62,1,0,2.6,1
+Montpellier,Monaco,10,09-10,3.5,4.0,1.95,0,2,1.95,2
+Nice,Estac Troyes,10,09-10,1.9,3.3,4.5,3,2,1.9,1
+Lyon,Toulouse,10,07-10,1.44,5.0,6.0,1,1,1.44,X
+Marseille,Ajaccio,10,08-10,1.45,4.33,7.0,1,2,1.45,2
+Stade Brestois 29,Lorient,10,09-10,2.25,3.5,3.2,1,2,2.25,2
+Rennes,Nantes,10,09-10,1.55,4.2,5.5,3,0,1.55,1
+Reims,Paris Saint Germain,10,08-10,8.0,6.0,1.3,0,0,1.3,X
+Auxerre,Nice,11,16-10,3.60,3.50,2.05,1,1,2.05,X
+Monaco,Clermont Foot,11,16-10,1.40,5.25,7.00,1,1,1.40,X
+Lorient,Reims,11,15-10,2.25,3.30,3.30,0,0,2.25,X
+Nantes,Stade Brestois 29,11,16-10,2.20,3.30,3.40,4,1,2.20,1
+Paris Saint Germain,Marseille,11,16-10,1.44,4.75,6.50,1,0,1.44,1
+Lens,Montpellier,11,15-10,1.45,4.75,6.50,1,0,1.45,1
+Strasbourg,Lille,11,14-10,3.10,3.30,2.30,0,3,2.30,2
+Rennes,Lyon,11,16-10,2.15,3.75,3.20,3,2,2.15,1
+Toulouse,Angers,11,16-10,1.85,3.75,3.80,3,2,1.85,1
+Estac Troyes,Ajaccio,11,16-10,2.20,3.20,3.50,1,1,2.20,X
