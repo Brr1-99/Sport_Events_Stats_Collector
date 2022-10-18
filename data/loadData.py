@@ -1,5 +1,4 @@
 from datetime import datetime
-from .ids import teams_id
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
@@ -119,11 +118,9 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
     return pd.DataFrame.from_records(teams)
 
 
-def getNextGames(team: str) -> pd.DataFrame:
-    
-    id = teams_id[team]
+def getNextGames(leagueId: str) -> pd.DataFrame:
 
-    querystring = {"team":f"{id}","next":"10"}
+    querystring = {"league":f"{leagueId}", "season":"2022", "next":"10"}
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
 
@@ -139,11 +136,8 @@ def getNextGames(team: str) -> pd.DataFrame:
 
         awayTeam = item['teams']['away']['name']
 
-        competition = item['league']['name']
-
         games.append(buildEvent(
-            homeTeam=homeTeam, awayTeam=awayTeam,
-            date=date, competition=competition
+            homeTeam=homeTeam, awayTeam=awayTeam, date=date,
         ))
 
     return pd.DataFrame.from_records(games)

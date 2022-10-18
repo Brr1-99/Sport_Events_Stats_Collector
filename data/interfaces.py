@@ -35,13 +35,11 @@ def buildEvent(
     homeTeam: str,
     awayTeam: str,
     date: datetime,
-    competition: str,
     ) -> dict:
     return {
         'Home': homeTeam,
         'Away': awayTeam,
         'Date': date,
-        'Competition': competition,
     }
 
 # Function to compute the match result 

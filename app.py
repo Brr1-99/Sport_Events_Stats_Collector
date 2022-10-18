@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from datetime import date
+from data.loadData import getNextGames
 from data.ids import leagues_id, teams_id
 
 today = date.today()
@@ -55,7 +56,25 @@ if len(teams_compare) > 1:
     option = st.selectbox('Compare value:', ['For Goals', 'Against Goals', 'Goal Diff', 'Wins', 'Draws', 'Loses', 'All points %','Home points %','Away points %'], index=2)
     st.bar_chart(data_teams, x='Name', y=f'{translate_options[option] if option in translate_options.keys() else option}')
 
-st.markdown("""---""")
+# # Function to compute the logo of the team
+# def logo(name: str) -> str:
+#     id = teams_id[name]
+#     return(f"<img src='https://media.api-sports.io/football/teams/{id}.png"
+#         f"""' style='display:block;margin-left:auto;margin-right:auto;width:40px;border:0;'><div style='text-align:center'>{name}"""
+#          "</div>")
+
+# @st.cache
+# def load_next_matches(comp: str) -> pd.DataFrame:
+#     data = getNextGames(leagues_id[comp])
+#     data['Home'] = data['Home'].apply(lambda x: logo(x))
+#     data['Away'] = data['Away'].apply(lambda x: logo(x))
+#     return data
+
+# data = load_next_matches(competition)
+
+# st.header(f"""Displaying next 10 matches for *{competition}* """)
+# st.write(data.to_html(escape=False, index=False), unsafe_allow_html=True)
+# st.markdown("""---""")
 
 # Part responsible for the rounds odds visualizer
 
@@ -118,10 +137,3 @@ try:
     st.dataframe(odds_data_styled)
 except ValueError:
     st.write('No coincidences found ❌. Try with a different value 🤔',)
-
-# Function to compute the logo of the team
-def logo(name: str) -> str:
-    id = teams_id[team]
-    return(f"<img src='https://media.api-sports.io/football/teams/{id}.png"
-        f"""' style='display:block;margin-left:auto;margin-right:auto;width:30px;border:0;'><div style='text-align:center'>{name}"""
-         "</div>")
