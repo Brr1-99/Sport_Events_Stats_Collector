@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-import datetime
+import datetime as dt
 from data.loadData import get_next_games
 from .ids import leagues_id
 
@@ -8,8 +8,8 @@ ids = leagues_id
 
 def update_Future(comp: str) -> pd.DataFrame:
 
-    timelapse = datetime.date.today() - datetime.timedelta(1)
-    changed = datetime.date.fromtimestamp(os.path.getmtime(f'src/future/{comp}.csv'))
+    timelapse = dt.date.today() - dt.timedelta(1)
+    changed = dt.date.fromtimestamp(os.path.getmtime(f'src/future/{comp}.csv'))
 
     if timelapse >= changed:
         df = get_next_games(ids[comp])
