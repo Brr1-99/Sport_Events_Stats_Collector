@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from datetime import date
-from data.updateFuture import updateFuture
+from data.updateFuture import update_Future
 from data.ids import leagues_id, teams_id
 
 today = date.today()
@@ -56,25 +56,25 @@ if len(teams_compare) > 1:
     option = st.selectbox('Compare value:', ['For Goals', 'Against Goals', 'Goal Diff', 'Wins', 'Draws', 'Loses', 'All points %','Home points %','Away points %'], index=2)
     st.bar_chart(data_teams, x='Name', y=f'{translate_options[option] if option in translate_options.keys() else option}')
 
-# # Function to compute the logo of the team
-# def logo(name: str) -> str:
-#     id = teams_id[name]
-#     return(f"<img src='https://media.api-sports.io/football/teams/{id}.png"
-#         f"""' style='display:block;margin-left:auto;margin-right:auto;width:40px;border:0;'><div style='text-align:center'>{name}"""
-#          "</div>")
+# Function to compute the logo of the team
+def logo(name: str) -> str:
+    id = teams_id[name]
+    return(f"<img src='https://media.api-sports.io/football/teams/{id}.png"
+        f"""' style='display:block;margin-left:auto;margin-right:auto;width:40px;border:0;'><div style='text-align:center'>{name}"""
+         "</div>")
 
-# @st.cache
-# def load_next_matches(comp: str) -> pd.DataFrame:
-#     data = updateFuture(comp)
-#     data['Home'] = data['Home'].apply(lambda x: logo(x))
-#     data['Away'] = data['Away'].apply(lambda x: logo(x))
-#     return data
+@st.cache
+def load_next_matches(comp: str) -> pd.DataFrame:
+    data = update_Future(comp)
+    data['Home'] = data['Home'].apply(lambda x: logo(x))
+    data['Away'] = data['Away'].apply(lambda x: logo(x))
+    return data
 
-# data = load_next_matches(competition)
+data = load_next_matches(competition)
 
-# st.header(f"""Displaying next 10 matches for *{competition}* """)
-# st.write(data.to_html(escape=False, index=False), unsafe_allow_html=True)
-# st.markdown("""---""")
+st.header(f"""Displaying next 10 matches for *{competition}* """)
+st.write(data.to_html(escape=False, index=False, justify='center'), unsafe_allow_html=True)
+st.markdown("""---""")
 
 # Part responsible for the rounds odds visualizer
 

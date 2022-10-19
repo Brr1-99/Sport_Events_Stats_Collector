@@ -1,6 +1,6 @@
-from data.updateStandings import updateStandings
-from data.updateRound import updateRound
+from data.updateStandings import update_standings
+from data.updateRound import update_round
 
-updateStandings()
+update_standings()
 
-updateRound()
+update_round()

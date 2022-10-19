@@ -5,7 +5,7 @@ from datetime import datetime
 # └────────────────────────
 
 # Function to create the finished match information 
-def buildMatch(
+def build_match(
     home: str,
     away: str,
     round: int,
@@ -27,23 +27,25 @@ def buildMatch(
         'HG': homeGoals,
         'AG': awayGoals,
         'Awaited': min(homeOdds, drawOdds, awayOdds),
-        'Final': getResult(homeGoals, awayGoals),
+        'Final': get_result(homeGoals, awayGoals),
     }
 
 # Function to create an upcoming match
-def buildEvent(
+def build_event(
     homeTeam: str,
     awayTeam: str,
     date: datetime,
+    hour: str
     ) -> dict:
     return {
         'Home': homeTeam,
         'Away': awayTeam,
         'Date': date,
+        'Hour': hour,
     }
 
 # Function to compute the match result 
-def getResult(homeGoals, awayGoals) -> str:
+def get_result(homeGoals, awayGoals) -> str:
     if homeGoals > awayGoals:
         return '1'
     if homeGoals < awayGoals:
@@ -51,7 +53,7 @@ def getResult(homeGoals, awayGoals) -> str:
     return 'X'
 
 # Function to create the team information 
-def buildTeam(
+def build_team(
     name: str,
     rank: int,
     points: int,

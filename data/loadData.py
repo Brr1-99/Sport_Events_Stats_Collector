@@ -3,7 +3,7 @@ import time
 import requests, os
 import pandas as pd
 from dotenv import load_dotenv
-from data.interfaces import buildMatch, buildTeam, buildEvent
+from data.interfaces import build_match, build_team, build_event
 
 load_dotenv()
 
@@ -14,7 +14,7 @@ headers = {
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
-def getRoundStats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
+def get_round_stats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
 
     querystring = {
         "league":f"{value}","season":f"{season}",
@@ -62,7 +62,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
             drawOdds = 1.00
             awayTeamOdds = 1.00
 
-        matchs.append(buildMatch(
+        matchs.append(build_match(
             home=homeTeam, away=awayTeam, round=num_round, date=date,
             homeOdds=homeTeamOdds, drawOdds=drawOdds, awayOdds=awayTeamOdds, 
             homeGoals=homeGoals, awayGoals=awayGoals))
@@ -70,7 +70,7 @@ def getRoundStats(value: int, season: int, startRound: datetime, endRound: datet
     return pd.DataFrame.from_records(matchs)
 
 
-def obtainYield(stand: dict, param: str) -> int:
+def obtain_yield(stand: dict, param: str) -> int:
 
     games = stand[f'{param}']['played']
     wins = stand[f'{param}']['win']
@@ -79,7 +79,7 @@ def obtainYield(stand: dict, param: str) -> int:
     return (100*(wins + draws/3)/games)
 
 
-def getStandings(leagueId: int, season: int) -> pd.DataFrame:
+def get_standings(leagueId: int, season: int) -> pd.DataFrame:
 
     querystring = {"season":f"{season}","league": f"{leagueId}"} 
 
@@ -106,11 +106,11 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
         totalDraws = stand['all']['draw']
         totalLoses = stand['all']['lose']
 
-        allPoints = obtainYield(stand, 'all')
-        homePoints = obtainYield(stand, 'home')
-        awayPoints = obtainYield(stand, 'away')
+        allPoints = obtain_yield(stand, 'all')
+        homePoints = obtain_yield(stand, 'home')
+        awayPoints = obtain_yield(stand, 'away')
 
-        teams.append(buildTeam(
+        teams.append(build_team(
             name=name, rank=rank, points=points, form=form,
             forGoals=forGoals, againstGoals=againstGoals, goalDiff=goalDiff,
             games=totalGames, wins=totalWins, draws=totalDraws, loses=totalLoses,
@@ -120,7 +120,7 @@ def getStandings(leagueId: int, season: int) -> pd.DataFrame:
     return pd.DataFrame.from_records(teams)
 
 
-def getNextGames(leagueId: str) -> pd.DataFrame:
+def get_next_games(leagueId: str) -> pd.DataFrame:
 
     querystring = {"league":f"{leagueId}", "season":"2022", "next":"10"}
 
@@ -132,14 +132,16 @@ def getNextGames(leagueId: str) -> pd.DataFrame:
 
         datetime = item['fixture']['date'].split('T')[0]
 
+        hour = item['fixture']['date'].split('T')[1].split('+')[0]
+
         date = datetime.split('-')[-1] + '-' + datetime.split('-')[-2]
 
         homeTeam = item['teams']['home']['name']
 
         awayTeam = item['teams']['away']['name']
 
-        games.append(buildEvent(
-            homeTeam=homeTeam, awayTeam=awayTeam, date=date,
+        games.append(build_event(
+            homeTeam=homeTeam, awayTeam=awayTeam, date=date, hour=hour,
         ))
 
     return pd.DataFrame.from_records(games)
