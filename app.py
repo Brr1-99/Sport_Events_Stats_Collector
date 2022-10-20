@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 from datetime import date
 from data.updateFuture import update_Future
-from data.ids import leagues_id, teams_id
+from data.ids import leagues_id
+from data.ids import teams_id
 
 today = date.today()
 

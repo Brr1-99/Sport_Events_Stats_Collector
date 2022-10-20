@@ -1,11 +1,11 @@
-Home,Away,Date
-Juventus,Empoli,21-10
-Salernitana,Spezia,22-10
-AC Milan,Monza,22-10
-Fiorentina,Inter,22-10
-Udinese,Torino,23-10
-Bologna,Lecce,23-10
-Atalanta,Lazio,23-10
-AS Roma,Napoli,23-10
-Cremonese,Sampdoria,24-10
-Sassuolo,Verona,24-10
+Home,Away,Date,Hour
+Juventus,Empoli,21-10,18:45:00
+Salernitana,Spezia,22-10,13:00:00
+AC Milan,Monza,22-10,16:00:00
+Fiorentina,Inter,22-10,18:45:00
+Udinese,Torino,23-10,10:30:00
+Bologna,Lecce,23-10,13:00:00
+Atalanta,Lazio,23-10,16:00:00
+AS Roma,Napoli,23-10,18:45:00
+Cremonese,Sampdoria,24-10,16:30:00
+Sassuolo,Verona,24-10,18:45:00

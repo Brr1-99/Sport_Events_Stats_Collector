@@ -1,11 +1,11 @@
-Home,Away,Date
-Bournemouth,Southampton,19-10
-Arsenal,Manchester City,19-10
-Brentford,Chelsea,19-10
-Newcastle,Everton,19-10
-Liverpool,West Ham,19-10
-Manchester United,Tottenham,19-10
-Fulham,Aston Villa,20-10
-Leicester,Leeds,20-10
-Nottingham Forest,Liverpool,22-10
-Everton,Crystal Palace,22-10
+Home,Away,Date,Hour
+Fulham,Aston Villa,20-10,18:30:00
+Leicester,Leeds,20-10,19:15:00
+Nottingham Forest,Liverpool,22-10,11:30:00
+Everton,Crystal Palace,22-10,14:00:00
+Manchester City,Brighton,22-10,14:00:00
+Chelsea,Manchester United,22-10,16:30:00
+Aston Villa,Brentford,23-10,13:00:00
+Leeds,Fulham,23-10,13:00:00
+Southampton,Arsenal,23-10,13:00:00
+Wolves,Leicester,23-10,13:00:00
