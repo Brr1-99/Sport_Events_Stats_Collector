@@ -1,7 +1,4 @@
 Home,Away,Date,Hour
-Almeria,Girona,20-10,17:00:00
-Osasuna,Espanyol,20-10,18:00:00
-Barcelona,Villarreal,20-10,19:00:00
 Rayo Vallecano,Cadiz,22-10,12:00:00
 Valladolid,Real Sociedad,22-10,14:15:00
 Valencia,Mallorca,22-10,16:30:00
@@ -9,3 +6,6 @@ Real Madrid,Sevilla,22-10,19:00:00
 Espanyol,Elche,23-10,12:00:00
 Real Betis,Atletico Madrid,23-10,14:15:00
 Girona,Osasuna,23-10,16:30:00
+Villarreal,Almeria,23-10,16:30:00
+Barcelona,Athletic Club,23-10,19:00:00
+Celta Vigo,Getafe,24-10,19:00:00
