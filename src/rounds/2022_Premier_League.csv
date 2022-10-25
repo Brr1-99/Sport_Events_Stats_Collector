@@ -86,13 +86,32 @@ Manchester City,Southampton,10,08-10,1.11,10.0,17.0,4,0,1.11,1
 Newcastle,Brentford,10,08-10,1.65,4.0,5.25,5,1,1.65,1
 Nottingham Forest,Aston Villa,10,10-10,3.8,3.6,1.95,1,1,1.95,X
 West Ham,Fulham,10,09-10,1.65,4.0,5.25,3,1,1.65,1
-Aston Villa,Chelsea,11,16-10,4.00,3.40,1.95,0,2,1.95,2
-Brentford,Brighton,11,14-10,3.25,3.40,2.20,2,0,2.20,1
-Fulham,Bournemouth,11,15-10,1.95,3.60,4.00,2,2,1.95,X
-Leeds,Arsenal,11,16-10,5.50,4.00,1.61,0,1,1.61,2
-Leicester,Crystal Palace,11,15-10,2.25,3.50,3.10,0,0,2.25,X
-Liverpool,Manchester City,11,16-10,3.60,4.00,1.90,1,0,1.90,1
-Manchester United,Newcastle,11,16-10,2.15,3.60,3.30,0,0,2.15,X
-Southampton,West Ham,11,16-10,2.90,3.30,2.45,1,1,2.45,X
-Tottenham,Everton,11,15-10,1.50,4.50,6.50,2,0,1.50,1
-Wolves,Nottingham Forest,11,15-10,1.70,3.75,5.00,1,0,1.70,1
+Aston Villa,Chelsea,11,16-10,4.0,3.4,1.95,0,2,1.95,2
+Brentford,Brighton,11,14-10,3.25,3.4,2.2,2,0,2.2,1
+Fulham,Bournemouth,11,15-10,1.95,3.6,4.0,2,2,1.95,X
+Leeds,Arsenal,11,16-10,5.5,4.0,1.61,0,1,1.61,2
+Leicester,Crystal Palace,11,15-10,2.25,3.5,3.1,0,0,2.25,X
+Liverpool,Manchester City,11,16-10,3.6,4.0,1.9,1,0,1.9,1
+Manchester United,Newcastle,11,16-10,2.15,3.6,3.3,0,0,2.15,X
+Southampton,West Ham,11,16-10,2.9,3.3,2.45,1,1,2.45,X
+Tottenham,Everton,11,15-10,1.5,4.5,6.5,2,0,1.5,1
+Wolves,Nottingham Forest,11,15-10,1.7,3.75,5.0,1,0,1.7,1
+Bournemouth,Southampton,12,19-10,2.70,3.20,2.60,0,1,2.60,2
+Brentford,Chelsea,12,19-10,4.75,3.90,1.70,0,0,1.70,X
+Brighton,Nottingham Forest,12,18-10,1.36,5.00,7.50,0,0,1.36,X
+Fulham,Aston Villa,12,20-10,3.10,3.30,2.30,3,0,2.30,1
+Leicester,Leeds,12,20-10,2.20,3.50,3.20,2,0,2.20,1
+Crystal Palace,Wolves,12,18-10,2.25,3.10,3.40,2,1,2.25,1
+Newcastle,Everton,12,19-10,1.65,3.80,5.25,1,0,1.65,1
+Liverpool,West Ham,12,19-10,1.40,5.00,7.00,1,0,1.40,1
+Manchester United,Tottenham,12,19-10,2.37,3.50,2.87,2,0,2.37,1
+Aston Villa,Brentford,12,23-10,2.05,3.40,3.60,4,0,2.05,1
+Chelsea,Manchester United,12,22-10,2.10,3.60,3.30,1,1,2.10,X
+Everton,Crystal Palace,12,22-10,2.55,3.10,3.00,3,0,2.55,1
+Leeds,Fulham,12,23-10,2.05,3.60,3.50,2,3,2.05,2
+Manchester City,Brighton,12,22-10,1.22,6.50,12.00,3,1,1.22,1
+Nottingham Forest,Liverpool,12,22-10,11.00,6.00,1.25,1,0,1.25,1
+Southampton,Arsenal,12,23-10,6.50,4.50,1.45,1,1,1.45,X
+Tottenham,Newcastle,12,23-10,2.00,3.50,3.60,1,2,2.00,2
+West Ham,Bournemouth,12,24-10,1.55,4.20,6.00,2,0,1.55,1
+Wolves,Leicester,12,23-10,2.30,3.30,3.20,0,4,2.30,2

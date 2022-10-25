@@ -14,7 +14,7 @@ headers = {
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
-def get_round_stats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
+def get_round_stats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame | None:
 
     querystring = {
         "league":f"{value}","season":f"{season}",
@@ -58,9 +58,9 @@ def get_round_stats(value: int, season: int, startRound: datetime, endRound: dat
             
         except Exception:
             print(f'El partido -> {homeTeam} vs {awayTeam} ha fallado')
-            homeTeamOdds = 1.00
-            drawOdds = 1.00
-            awayTeamOdds = 1.00
+            homeTeamOdds = 1
+            drawOdds = 1
+            awayTeamOdds = 1
 
         matchs.append(build_match(
             home=homeTeam, away=awayTeam, round=num_round, date=date,

@@ -1,11 +1,11 @@
 Home,Away,Date,Hour
-Ajaccio,Paris Saint Germain,21-10,19:00:00
-Montpellier,Lyon,22-10,15:00:00
-Marseille,Lens,22-10,19:00:00
-Angers,Rennes,23-10,11:00:00
-Clermont Foot,Stade Brestois 29,23-10,13:00:00
-Reims,Auxerre,23-10,13:00:00
-Toulouse,Strasbourg,23-10,13:00:00
-Estac Troyes,Lorient,23-10,13:00:00
-Nice,Nantes,23-10,15:05:00
-Lille,Monaco,23-10,18:45:00
+Lens,Toulouse,28-10,19:00:00
+Paris Saint Germain,Estac Troyes,29-10,15:00:00
+Strasbourg,Marseille,29-10,19:00:00
+Auxerre,Ajaccio,30-10,12:00:00
+Monaco,Angers,30-10,14:00:00
+Nantes,Clermont Foot,30-10,14:00:00
+Stade Brestois 29,Reims,30-10,14:00:00
+Rennes,Montpellier,30-10,14:00:00
+Lorient,Nice,30-10,16:05:00
+Lyon,Lille,30-10,19:45:00
