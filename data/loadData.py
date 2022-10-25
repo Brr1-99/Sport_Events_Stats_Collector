@@ -14,7 +14,7 @@ headers = {
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
-def get_round_stats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame | None:
+def get_round_stats(value: int, season: int, startRound: datetime, endRound: datetime) -> pd.DataFrame:
 
     querystring = {
         "league":f"{value}","season":f"{season}",
@@ -22,11 +22,8 @@ def get_round_stats(value: int, season: int, startRound: datetime, endRound: dat
         "timezone":"Europe/Madrid", "status":"NS-FT"}
 
     response = requests.request("GET", base_url + 'fixtures', headers=headers, params=querystring).json()
-    try:
-        num_round = response['response'][0]['league']['round'].split(' ')[-1]
-    except Exception:
-        print(f'La competición {value} ha fallado')
-        return None
+
+    num_round = response['response'][0]['league']['round'].split(' ')[-1]
 
     matchs = []
 
