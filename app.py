@@ -74,7 +74,7 @@ def load_next_matches(comp: str) -> pd.DataFrame:
 data = load_next_matches(competition)
 
 st.header(f"""Displaying next 10 matches for *{competition}* """)
-st.write(data.to_html(escape=False, index=False, justify='center'), unsafe_allow_html=True)
+st.write(data.to_html(escape=False, index=False, justify='center', col_space=150).replace('<td>', '<td align="center">'), unsafe_allow_html=True)
 st.markdown("""---""")
 
 # Part responsible for the rounds odds visualizer
