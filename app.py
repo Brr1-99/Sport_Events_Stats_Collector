@@ -117,7 +117,7 @@ with number_goals:
     else:
         odds_data = odds_data.loc[(odds_data['HG'] + odds_data['AG'] <= number)]
 
-def show_results(row: object) -> list :
+def show_results(row: object) -> list[str] :
     text = []
     idx = {'1': 0, 'X': 1, '2': 2}
     for item in row:

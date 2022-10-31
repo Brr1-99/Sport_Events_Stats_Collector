@@ -1,11 +1,11 @@
 Home,Away,Date,Hour
-Napoli,Sassuolo,29-10,13:00:00
-Lecce,Juventus,29-10,16:00:00
-Inter,Sampdoria,29-10,18:45:00
-Empoli,Atalanta,30-10,11:30:00
-Cremonese,Udinese,30-10,14:00:00
-Spezia,Fiorentina,30-10,14:00:00
-Lazio,Salernitana,30-10,17:00:00
-Torino,AC Milan,30-10,19:45:00
 Verona,AS Roma,31-10,17:30:00
 Monza,Bologna,31-10,19:45:00
+Udinese,Lecce,04-11,19:45:00
+Empoli,Sassuolo,05-11,14:00:00
+Salernitana,Cremonese,05-11,14:00:00
+Atalanta,Napoli,05-11,17:00:00
+AC Milan,Spezia,05-11,19:45:00
+Bologna,Torino,06-11,11:30:00
+Sampdoria,Fiorentina,06-11,14:00:00
+Monza,Verona,06-11,14:00:00

@@ -67,7 +67,7 @@ def get_round_stats(value: int, season: int, startRound: datetime, endRound: dat
     return pd.DataFrame.from_records(matchs)
 
 
-def obtain_yield(stand: dict, param: str) -> int:
+def obtain_yield(stand: dict[str, int], param: str) -> int:
 
     games = stand[f'{param}']['played']
     wins = stand[f'{param}']['win']

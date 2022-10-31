@@ -15,7 +15,7 @@ def build_match(
     awayOdds: int,
     homeGoals: int,
     awayGoals: int,
-    ) -> dict:
+    ) -> dict[str, str | int | datetime]:
     return {
         'Home': home,
         'Away': away,
@@ -36,7 +36,7 @@ def build_event(
     awayTeam: str,
     date: datetime,
     hour: str
-    ) -> dict:
+    ) -> dict[str, str | datetime]:
     return {
         'Home': homeTeam,
         'Away': awayTeam,
@@ -45,7 +45,7 @@ def build_event(
     }
 
 # Function to compute the match result 
-def get_result(homeGoals, awayGoals) -> str:
+def get_result(homeGoals: int, awayGoals: int) -> str:
     if homeGoals > awayGoals:
         return '1'
     if homeGoals < awayGoals:
@@ -68,7 +68,7 @@ def build_team(
     allPoints: int,
     homePoints: int,
     awayPoints: int,
-    ) -> dict:
+    ) -> dict[str, str | int]:
     return {
         'Name': name,
         'Rank': rank,
