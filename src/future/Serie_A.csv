@@ -1,7 +1,4 @@
 Home,Away,Date,Hour
-Verona,AS Roma,31-10,17:30:00
-Monza,Bologna,31-10,19:45:00
-Udinese,Lecce,04-11,19:45:00
 Empoli,Sassuolo,05-11,14:00:00
 Salernitana,Cremonese,05-11,14:00:00
 Atalanta,Napoli,05-11,17:00:00
@@ -9,3 +6,6 @@ AC Milan,Spezia,05-11,19:45:00
 Bologna,Torino,06-11,11:30:00
 Sampdoria,Fiorentina,06-11,14:00:00
 Monza,Verona,06-11,14:00:00
+AS Roma,Lazio,06-11,17:00:00
+Juventus,Inter,06-11,19:45:00
+Napoli,Empoli,08-11,17:30:00
